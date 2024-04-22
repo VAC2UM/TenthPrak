@@ -3,4 +3,7 @@
     <string name="save">Save</string>
     <string name="name">Name</string>
     <string name="year">Year</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="find">Find</string>
 </resources>

@@ -15,8 +15,18 @@ public interface FilmDao {
     @Delete
     public void delete(Film film);
 
+    @Query("UPDATE films SET Year = :year WHERE Name = :name")
+    void updateFilmYear(String name, String year);
+
     @Update
-    public void update(Film film);
+    void update(Film film);
+
+    @Query("DELETE FROM films WHERE Name = :name")
+    void deleteFilmByName(String name);
+
+    @Query("SELECT * FROM films WHERE Name = :name")
+    Film findFilmByName(String name);
+
 
     @Query("select * from films")
     public List<Film> getAllFilms();
